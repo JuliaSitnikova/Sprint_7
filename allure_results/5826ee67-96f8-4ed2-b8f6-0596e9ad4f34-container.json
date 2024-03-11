@@ -1,0 +1,1 @@
+{"uuid": "10346840-090e-44cb-bd24-9f4bf0b75058", "children": ["294e864c-9d0e-4cee-9dd7-f2bac35cc50b"], "befores": [{"name": "create_user_payload", "status": "passed", "steps": [{"name": "Заполнение данных по курьеру", "status": "passed", "start": 1710155796754, "stop": 1710155796754}], "start": 1710155796754, "stop": 1710155796754}], "start": 1710155796754, "stop": 1710155797984}
