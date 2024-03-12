@@ -21,11 +21,14 @@ def create_order_payload():
 @pytest.fixture
 @allure.step('Создание курьера логин/удаление')
 def create_courier_login_and_delete(create_user_payload):
-    payload = create_user_payload
-    RequestsCourier.create_courier_post(payload)
-    response = RequestsCourier.login_courier_post(payload)
-    return response
+    rcr = RequestsCourier()
+    payload = rcr.create_courier_post(create_user_payload)
+    response = payload
+    yield response
     RequestsCourier.delete_courier(courier_id=response["id"])
+
+
+
 
 @pytest.fixture
 @allure.step('Заполнение данных по курьеру')
